@@ -10,7 +10,7 @@ export default class Server {
 		this.port = Number(process.env.SERVER_PORT || 3000);
 	}
 
-	start(callback: Function) {
+	start(callback: () => void) {
 		this.app.listen(this.port, callback);
 	}
 
