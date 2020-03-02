@@ -8,7 +8,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import path from 'path';
 
-const publicPath = path.resolve(__dirname, '../public');
+const publicPath = path.resolve(__dirname, '../../public');
 
 const server = Server.instance;
 
