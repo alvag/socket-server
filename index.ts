@@ -1,4 +1,6 @@
-require( 'dotenv' ).config();
+import dotEnvExtended from 'dotenv-extended';
+dotEnvExtended.load();
+
 import express from 'express';
 import router from './routes/router';
 import Server from './classes/server';
