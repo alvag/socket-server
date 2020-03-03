@@ -35,7 +35,11 @@ export default class Server {
 			console.log('Cliente conectado');
 
 			socket.message(client, this.io);
+
 			socket.disconnect(client);
+
+			socket.configUser(client, this.io);
+
 		})
 	}
 
