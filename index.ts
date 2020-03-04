@@ -18,6 +18,9 @@ server.app.use(bodyParser.json());
 server.app.use(cors({origin: true, credentials: true}));
 
 server.app.use(express.static(publicPath));
+// server.app.get('*', (req, res, next) => {
+// 	res.sendFile(path.resolve(`${publicPath}/index.html`))
+// });
 
 server.app.use('/api', router);
 
