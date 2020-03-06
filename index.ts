@@ -17,12 +17,12 @@ server.app.use(bodyParser.json());
 
 server.app.use(cors({origin: true, credentials: true}));
 
+server.app.use('/api', router);
+
 server.app.use(express.static(publicPath));
 server.app.get('*', (req, res, next) => {
 	res.sendFile(path.resolve(`${publicPath}/index.html`))
 });
-
-server.app.use('/api', router);
 
 server.start( () => {
 	console.log( `Servidor corriendo en el pueto ${server.port}` );

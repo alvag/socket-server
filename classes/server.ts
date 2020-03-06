@@ -39,10 +39,11 @@ export default class Server {
 			// Configurar usuario
 			socket.configUser(client, this.io);
 
+			socket.getUsers(client, this.io);
+
 			socket.message(client, this.io);
 
-			socket.disconnect(client);
-
+			socket.disconnect(client, this.io);
 
 		})
 	}
